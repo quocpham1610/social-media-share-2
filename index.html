@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Website</title>
+</head>
+
+<body>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="image">
+            <img src="img1.jpg" alt="Image 1">
+            <div class="share-buttons">
+                <button onclick="shareFacebook('image1.jpghttp://127.0.0.1:5501/img1.jpg')">Share on Facebook</button>
+                <button onclick="shareTwitter('http://127.0.0.1:5501/img1.jpg.jpg')">Share on Twitter</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="img1.jpg" alt="Image 2">
+            <div class="share-buttons">
+                <button onclick="shareFacebook('imaghttp://127.0.0.1:5501/img1.jpge2.jpg')">Share on Facebook</button>
+                <button onclick="shareTwitter('http://127.0.0.1:5501/img1.jpg')">Share on Twitter</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="img1.jpg" alt="Image 2">
+            <div class="share-buttons">
+                <button onclick="shareFacebook('http://127.0.0.1:5501/img1.jpg')">Share on Facebook</button>
+                <button onclick="shareTwitter('http://127.0.0.1:5501/img1.jpg')">Share on Twitter</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="img1.jpg" alt="Image 2">
+            <div class="share-buttons">
+                <button onclick="shareFacebook('http://127.0.0.1:5501/img1.jpg')">Share on Facebook</button>
+                <button onclick="shareTwitter('http://127.0.0.1:5501/img1.jpg')">Share on Twitter</button>
+            </div>
+        </div>
+        <!-- Add more images here -->
+    </section>
+
+    <!-- Social Share Script -->
+    <script>
+        function shareFacebook(imageUrl) {
+            var shareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href) + "&picture=" + encodeURIComponent(imageUrl);
+            window.open(shareUrl, "_blank");
+        }
+
+        function shareTwitter(imageUrl) {
+            var shareUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location.href) + "&text=Check%20out%20this%20image&hashtags=gallery";
+            window.open(shareUrl, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
